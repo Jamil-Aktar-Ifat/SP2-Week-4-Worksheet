@@ -12,6 +12,7 @@ public class learningClass {
         // String nameString = ourCar.manufacturerName;
         // String modelName;
         thirdCar = new CarClass("Marcedes", "S class", "asbcd", 2000, 20);
+        SubCarClass ourSubCar = new SubCarClass("BMW", "M series", "zxcvb", 2430, 40, 30, "black");
 
         ourAnotherCar = new CarClass("Ford", "Mustang", "qwerty", 1500, 30);
         System.out.println("---------------------------");
@@ -42,6 +43,22 @@ public class learningClass {
         System.out.println("After adding 2L fuel: " + thirdCar.presentAmountOfFuel() + 'L');
         thirdCar.runForSeconds(600);
         System.out.println("Amount of fuel after running for 60s: " + thirdCar.presentAmountOfFuel() + 'L');
+        System.out.println("---------------------------");
+        System.out.println("---------Sub Car--------");
+        System.out.println("Manufacturer: " + ourSubCar.manufacturerName);
+        System.out.println("Model Name: " + ourSubCar.getModelName());
+        System.out.println("Password Matched? : " + ourSubCar.matchCarKeyValue("qwerty"));
+        System.out.println("1st Car name: " + ourCar.manufacturerName); // output is empty because we didnt input
+                                                                        // anything on the variable
+        System.out.println("1st car CC: " + ourCar.engineCC);
+        System.out.println("2nd car CC: " + ourSubCar.engineCC);
+        System.out.println("Amount of fuel: " + ourSubCar.presentAmountOfFuel() + 'L');
+        ourSubCar.addFuel(2);
+        System.out.println("After adding 2L fuel: " + ourSubCar.presentAmountOfFuel() + 'L');
+        ourSubCar.runForSeconds(600);
+        System.out.println("Amount of fuel after running for 60s: " + ourSubCar.presentAmountOfFuel() + 'L');
+        System.out.println("Charge in Battery: " + ourSubCar.getChargeInBattery());
+        System.out.println("Color of Car: " + ourSubCar.getColorString());
         System.out.println("---------------------------");
 
     }
